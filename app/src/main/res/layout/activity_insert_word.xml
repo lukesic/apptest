@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15pt"
+        android:text="Inserir nova palavra"/>
+<!-- Palavra DT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15pt"
+        android:textSize="6pt"
+        android:text="@string/label_word_deutsch"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEditWordDeutsch"
+        android:textSize="6pt"/>
+<!-- Palavra PT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4pt"
+        android:textSize="6pt"
+        android:text="@string/label_word_portuguese"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEditWordPortuguese"
+        android:textSize="6pt"/>
+<!-- Genero -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4pt"
+        android:textSize="6pt"
+        android:text="@string/label_gender"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/label_gender"
+        android:id="@+id/spinnerGender"/>
+
+<!-- Palavra em plural -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4pt"
+        android:textSize="6pt"
+        android:text="@string/label_plural_form"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEditPluralForm"
+        android:textSize="6pt"/>
+
+<!-- Tipo da palavra -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4pt"
+        android:textSize="6pt"
+        android:text="@string/label_word_type"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/label_word_type"
+        android:id="@+id/spinnerWordType"/>
+
+
+
+</LinearLayout>

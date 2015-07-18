@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Deutsch</string>
+    <string name="title_activity_main">Deutsch</string>
+
+    <!-- Botoes -->
+    <string name="btn_words">Palavras</string>
+
+    <!-- Labels -->
+    <string name="label_word_deutsch">Palavra em alemão</string>
+    <string name="label_word_portuguese">Palavra em portugues</string>
+    <string name="label_gender">Genero</string>
+    <string name="label_plural_form">Palavra em plural</string>
+    <string name="label_word_type">Tipo da palavra</string>
+    
+    <!-- Spinners contents -->
+    
+    <string-array name="spinner_gender_content">
+        <item>Der</item>
+        <item>Die</item>
+        <item>Das</item>
+    </string-array>
+
+    <string-array name="spinner_word_type">
+        <item>Verbo</item>
+        <item>Substantivo</item>
+        <item>Adjetivo</item>
+        <item>Pronome</item>
+        <item>Adverbio</item>
+    </string-array>
+</resources>
