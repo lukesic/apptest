@@ -29,6 +29,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activities.InsertNewWordActivity">
+            <intent-filter>
+                <action android:name="deutsch.ACTION_OPEN_INSERT_NEW_WORD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="deutsch.CATEGORY_INSERT_NEW_WORD" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

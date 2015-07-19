@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -57,7 +58,7 @@ public class WordsActivity extends Activity {
         listOfWords.setAdapter(cursorAdapter);
     }
 
-    public void insertNewWord(){
+    public void insertNewWord(View v){
         Intent intent = new Intent(InsertNewWordActivity.ACTION_OPEN_INSERT_NEW_WORD);
 
         intent.addCategory(InsertNewWordActivity.CATEGORY_INSERT_NEW_WORD);
