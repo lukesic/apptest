@@ -1,11 +1,14 @@
 package lukesic.com.study_app.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import java.sql.SQLException;
+
+import lukesic.com.study_app.entity.Word;
 
 /**
  * Created by luizfelipe on 4/25/15.
@@ -33,5 +36,21 @@ public class SQLController {
 
     public Cursor getAll(){
         return sqLiteDatabase.rawQuery("select * from words order by _id", null);
+    }
+
+    public long insertWord(Word word){
+        ContentValues values = new ContentValues();
+
+        values.put(DataBase.WORD_DEUTSCH_COLUMN, word.getWordInDeutsch());
+        values.put(DataBase.WORD_PORTUGUESE_COLUMN, word.getWordInPortuguese());
+        values.put(DataBase.GENDER_COLUMN, word.getGender());
+        values.put(DataBase.PLURAL_FORM_COLUMN, word.getPuralForm());
+        values.put(DataBase.WORD_TYPE_COLUMN, word.getWordType());
+
+        long newRowId;
+
+        newRowId = sqLiteDatabase.insert(DataBase.TABLE_WORD, "",values);
+
+        return newRowId;
     }
 }

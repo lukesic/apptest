@@ -56,6 +56,11 @@ public class WordsActivity extends Activity {
 
         cursorAdapter.notifyDataSetChanged();
         listOfWords.setAdapter(cursorAdapter);
+        listOfWords.setOnClickListener();
+    }
+
+    public void itemSelected(View v){
+        Log.d("Valor",listOfWords.getSelectedItem().toString());
     }
 
     public void insertNewWord(View v){

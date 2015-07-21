@@ -14,7 +14,7 @@ public class Word {
     private String wordInPortuguese;
     private String gender;
     private String puralForm;
-    private WordType wordType;
+    private String wordType;
     private Calendar dateInserted;
 
 
@@ -50,7 +50,7 @@ public class Word {
         this.puralForm = puralForm;
     }
 
-    public void setWordType(WordType wordType) {
+    public void setWordType(String wordType) {
         this.wordType = wordType;
     }
 
@@ -71,7 +71,7 @@ public class Word {
         return puralForm;
     }
 
-    public WordType getWordType() {
+    public String getWordType() {
         return wordType;
     }
 }

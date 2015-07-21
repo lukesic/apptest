@@ -79,6 +79,12 @@
         android:prompt="@string/label_word_type"
         android:id="@+id/spinnerWordType"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_insert_word"
+        android:onClick="saveWord"/>
+
 
 
 </LinearLayout>

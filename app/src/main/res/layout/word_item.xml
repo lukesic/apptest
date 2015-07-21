@@ -12,7 +12,14 @@
         android:id="@+id/word_in_deutsch"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="13pt"
+        android:textSize="20pt"
         android:layout_marginTop="3pt"
         android:layout_marginBottom="3pt"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20pt"
+        android:layout_marginTop="10pt"
+        android:id="@+id/word_in_portuguese"/>
 </LinearLayout>

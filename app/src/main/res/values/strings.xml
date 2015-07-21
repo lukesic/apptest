@@ -4,6 +4,7 @@
 
     <!-- Botoes -->
     <string name="btn_words">Palavras</string>
+    <string name="btn_insert_word">Salvar</string>
 
     <!-- Labels -->
     <string name="label_word_deutsch">Palavra em alemão</string>
