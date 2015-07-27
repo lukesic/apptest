@@ -43,24 +43,31 @@ public class WordsActivity extends Activity {
 
         listOfWords = (ListView) findViewById(R.id.listOfWords);
         listOfWords.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        Cursor cursor = sqlController.getAll();
-
+        final Cursor cursor = sqlController.getAll();
 
 
         Log.d("Valor", String.valueOf(cursor.getCount()));
 
-        String[] from = new String[] {DataBase.WORD_ID, DataBase.WORD_IN_DEUTSCH};
-        int[] to = new int[] {R.id.word_id, R.id.word_in_deutsch};
+        String[] from = new String[]{DataBase.WORD_ID, DataBase.WORD_IN_DEUTSCH};
+        int[] to = new int[]{R.id.word_id, R.id.word_in_deutsch};
 
         SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(WordsActivity.this, R.layout.word_item, cursor, from, to, 1);
 
         cursorAdapter.notifyDataSetChanged();
         listOfWords.setAdapter(cursorAdapter);
-        listOfWords.setOnClickListener();
-    }
+        listOfWords.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Cursor list = (Cursor) listOfWords.getItemAtPosition(i);
+                //Log.d("Valor ", cursor.getString(i));
 
-    public void itemSelected(View v){
-        Log.d("Valor",listOfWords.getSelectedItem().toString());
+                Intent intent = new Intent(WordItemActivity.ACTION_OPEN_WORD_ITEM);
+                intent.addCategory(WordItemActivity.CATEGORY_WORD_ITEM);
+
+                intent.putExtra(WordItemActivity.EXTRA_WORD_ID, cursor.getInt(0));
+                startActivity(intent);
+            }
+        });
     }
 
     public void insertNewWord(View v){

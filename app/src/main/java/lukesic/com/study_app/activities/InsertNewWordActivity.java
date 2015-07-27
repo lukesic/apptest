@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -77,16 +78,8 @@ public class InsertNewWordActivity extends Activity{
                 startActivity(intent);
             }
         }else {
-            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-            alertDialog.setTitle("Alert");
-            alertDialog.setMessage(statusReturn);
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-            alertDialog.show();
+            Toast toast = Toast.makeText(getApplicationContext(), statusReturn, Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 

@@ -38,6 +38,15 @@
                 <category android:name="deutsch.CATEGORY_INSERT_NEW_WORD" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activities.WordItemActivity">
+            <intent-filter>
+                <action android:name="deutsch.ACTION_OPEN_WORD_ITEM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="deutsch.CATEGORY_WORD_ITEM" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

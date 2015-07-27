@@ -38,6 +38,11 @@ public class SQLController {
         return sqLiteDatabase.rawQuery("select * from words order by _id", null);
     }
 
+    public Cursor getWordById(int idWord){
+        String query = "select * from words where _id=" + idWord + ";";
+        return sqLiteDatabase.rawQuery(query, null);
+    }
+
     public long insertWord(Word word){
         ContentValues values = new ContentValues();
 
