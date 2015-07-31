@@ -46,8 +46,6 @@ public class WordsActivity extends Activity {
         final Cursor cursor = sqlController.getAll();
 
 
-        Log.d("Valor", String.valueOf(cursor.getCount()));
-
         String[] from = new String[]{DataBase.WORD_ID, DataBase.WORD_IN_DEUTSCH};
         int[] to = new int[]{R.id.word_id, R.id.word_in_deutsch};
 
@@ -59,7 +57,7 @@ public class WordsActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Cursor list = (Cursor) listOfWords.getItemAtPosition(i);
-                //Log.d("Valor ", cursor.getString(i));
+
 
                 Intent intent = new Intent(WordItemActivity.ACTION_OPEN_WORD_ITEM);
                 intent.addCategory(WordItemActivity.CATEGORY_WORD_ITEM);

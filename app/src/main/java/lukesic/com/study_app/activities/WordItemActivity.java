@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.sql.SQLException;
 
@@ -20,6 +21,8 @@ public class WordItemActivity extends Activity {
     public static final String CATEGORY_WORD_ITEM = "deutsch.CATEGORY_WORD_ITEM";
     public static final String EXTRA_WORD_ID = "deutsch.EXTRA_WORD_ID";
 
+    private TextView wordInDeutschTextView;
+    private TextView wordInPortugueseTextView;
 
     private SQLController sqlController;
 
@@ -43,6 +46,12 @@ public class WordItemActivity extends Activity {
             }
 
             Cursor cursor = sqlController.getWordById(idWord);
+
+            wordInDeutschTextView = (TextView) findViewById(R.id.word_in_deutsch);
+            wordInPortugueseTextView = (TextView) findViewById(R.id.word_in_portuguese);
+
+            wordInDeutschTextView.setText(cursor.getString(3) + " " + cursor.getString(1));
+            wordInPortugueseTextView.setText(cursor.getString(2));
         }
     }
 }

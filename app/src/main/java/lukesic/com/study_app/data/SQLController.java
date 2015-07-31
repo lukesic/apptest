@@ -39,8 +39,11 @@ public class SQLController {
     }
 
     public Cursor getWordById(int idWord){
-        String query = "select * from words where _id=" + idWord + ";";
-        return sqLiteDatabase.rawQuery(query, null);
+        String where = "_id=" + idWord;
+        String columns[] = {"_id, word_in_deutsch, word_in_portuguese, gender, plural_form, word_type"};
+        Cursor cursor = sqLiteDatabase.query(true, "words",columns , where, null, null, null, null, null);
+        cursor.moveToFirst();
+        return cursor;
     }
 
     public long insertWord(Word word){
